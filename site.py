@@ -1,6 +1,6 @@
-
 import streamlit as st
 import base64
+
 def set_bg(image_file):
     with open(image_file, "rb") as f:
         data = base64.b64encode(f.read()).decode()
@@ -9,7 +9,7 @@ def set_bg(image_file):
         <style>
         .stApp {{
             background-image: url("data:image/jpg;base64,{data}");
-            background-size: contain;
+            background-size: cover;
             background-position: center;
             background-attachment: fixed;
         }}
@@ -57,4 +57,7 @@ with slot.container():
 
     # --- Финал: кнопка-ссылка на другой сайт ---
     elif st.session_state.answer == "why":
-        st.link_button("поставить 5", "https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&ved=2ahUKEwiZ0de_jKCXAxWSIRAIHX9rK3oQFnoECA8QAQ&url=https%3A%2F%2Fedu.rk.gov.ru%2F&usg=AOvVaw2Lis5Nu07A8qMFo2-fFnBY&opi=89978449")
+        st.link_button(
+            "поставить 5",
+            "https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&ved=2ahUKEwiZ0de_jKCXAxWSIRAIHX9rK3oQFnoECA8QAQ&url=https%3A%2F%2Fedu.rk.gov.ru%2F&usg=AOvVaw2Lis5Nu07A8qMFo2-fFnBY&opi=89978449"
+        )

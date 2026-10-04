@@ -1,9 +1,6 @@
 
 import streamlit as st
 import base64
-from pathlib import Path
-from pyngrok import ngrok
-ngrok.connect(8501)
 def set_bg(image_file):
     with open(image_file, "rb") as f:
         data = base64.b64encode(f.read()).decode()

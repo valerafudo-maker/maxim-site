@@ -1,4 +1,5 @@
 import streamlit as st
+st.set_option("client.toolbarMode", "viewer")
 import base64
 
 def set_bg(image_file):
